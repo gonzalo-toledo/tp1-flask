@@ -1,0 +1,31 @@
+{% extends "template_base.html" %}
+
+{% block title %}
+    Productos
+{% endblock %}
+
+
+{% block article %}
+
+<h1>
+    Productos
+</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Categoría</th>
+        </tr>    
+    </thead>
+    <tbody>
+        {% for producto in lista %}
+        <tr>
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.categoria}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
